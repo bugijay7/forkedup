@@ -31,12 +31,12 @@ function OrderPage() {
                 className="bg-gray-800 p-4 rounded shadow-md flex flex-col sm:flex-row items-start gap-4"
               >
                 <img
-                  src={`http://localhost:3000/images/${item.image_url}`}
+                  src={`https://forkedup.onrender.com/images/${item.image_url}`}
                   alt={item.name}
                   className="w-32 h-32 object-cover rounded"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = `http://localhost:3000/${item.image_url}`;
+                    e.target.src = `https://forkedup.onrender.com/${item.image_url}`;
                   }}
                 />
                 <div>

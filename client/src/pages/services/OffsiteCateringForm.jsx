@@ -22,7 +22,7 @@ function OffsiteCateringForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/api/offcatering', {
+      const response = await fetch('https://forkedup.onrender.com/api/offcatering', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -14,7 +14,7 @@ function AccompanimentPage() {
   useEffect(() => {
     const fetchAccompaniments = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/accompaniments');
+        const response = await fetch('https://forkedup.onrender.com/api/accompaniments');
         if (!response.ok) {
           throw new Error('Failed to fetch accompaniments');
         }
@@ -78,7 +78,7 @@ function AccompanimentPage() {
           <div key={item.id} className="card w-full bg-base-100 shadow-md">
             <figure>
               <img
-                src={`http://localhost:3000/${item.image_url}`}
+                src={`https://forkedup.onrender.com/${item.image_url}`}
                 alt={item.name}
                 className="w-full h-64 object-cover"
               />

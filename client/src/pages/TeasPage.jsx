@@ -14,7 +14,7 @@ function TeasPage() {
   useEffect(() => {
     const fetchTeas = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/teas');
+        const response = await fetch('https://forkedup.onrender.com/api/teas');
         if (!response.ok) throw new Error('Failed to fetch teas');
         const data = await response.json();
         setTeas(data);
@@ -77,7 +77,7 @@ function TeasPage() {
           <div key={item.id} className="card w-full bg-base-100 shadow-md">
             <figure>
               <img
-                src={`http://localhost:3000/images/${item.image_url}`}
+                src={`https://forkedup.onrender.com/images/${item.image_url}`}
                 alt={item.name}
                 className="w-full h-64 object-cover"
               />

@@ -14,7 +14,7 @@ function CoffeePage() {
   useEffect(() => {
     const fetchCoffees = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/coffees');
+        const response = await fetch('https://forkedup.onrender.com/api/coffees');
         if (!response.ok) throw new Error('Failed to fetch coffees');
         const data = await response.json();
         setCoffees(data);
@@ -77,7 +77,7 @@ function CoffeePage() {
           <div key={item.id} className="card w-full bg-base-100 shadow-md">
             <figure>
               <img
-                src={`http://localhost:3000/images/${item.image_url}`}
+                src={`https://forkedup.onrender.com/images/${item.image_url}`}
                 alt={item.name}
                 className="w-full h-64 object-cover"
               />

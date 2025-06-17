@@ -14,7 +14,7 @@ function SnacksPage() {
   useEffect(() => {
     const fetchSnacks = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/snacks');
+        const response = await fetch('https://forkedup.onrender.com/api/snacks');
         if (!response.ok) throw new Error('Failed to fetch snacks');
         const data = await response.json();
         setSnacks(data);
@@ -77,7 +77,7 @@ function SnacksPage() {
           <div key={item.id} className="card w-full bg-base-100 shadow-md">
             <figure>
               <img
-                src={`http://localhost:3000/images/${item.image_url}`}
+                src={`https://forkedup.onrender.com/images/${item.image_url}`}
                 alt={item.name}
                 className="w-full h-64 object-cover"
               />

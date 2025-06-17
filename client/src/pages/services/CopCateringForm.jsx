@@ -22,7 +22,7 @@ function CopCateringForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/api/copcatering', {
+      const response = await fetch('https://forkedup.onrender.com/api/copcatering', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

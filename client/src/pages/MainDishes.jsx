@@ -14,7 +14,7 @@ function MainDishes() {
   useEffect(() => {
     const fetchMainDishes = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/mains');
+        const response = await fetch('https://forkedup.onrender.com/api/mains');
         if (!response.ok) {
           throw new Error('Failed to fetch main dishes');
         }
@@ -79,7 +79,7 @@ function MainDishes() {
           <div key={item.id} className="card w-full bg-base-100 shadow-md">
             <figure>
               <img
-                src={`http://localhost:3000/images/${item.image_url}`}
+                src={`https://forkedup.onrender.com/images/${item.image_url}`}
                 alt={item.name}
                 className="w-full h-64 object-cover"
               />
